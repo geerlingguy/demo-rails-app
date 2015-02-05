@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: .5em 0;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  border-bottom: 2px solid #555555;
+  padding: .5em .4em;
+}
+
+td {
+  padding: .4em .4em 0;
+}
+
+button {
+  font-size: 1em;
+}

@@ -1,3 +1,17 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+form input,
+form textarea {
+  font-size: 1em;
+}
+
+#article_title {
+  width: 60%;
+}
+
+#article_text {
+  width: 60%;
+  height: 8em;
+}
