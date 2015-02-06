@@ -7,6 +7,18 @@ form textarea {
   font-size: 1em;
 }
 
+#error_explanation {
+  color: #d8000c;
+  background-color: #ffefef;
+  border: 1px solid;
+  margin: 0;
+  padding: .5em 1em;
+}
+
+#error_explanation h2 {
+  font-size: 1.25em;
+}
+
 #article_title {
   width: 60%;
 }
