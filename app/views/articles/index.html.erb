@@ -1,5 +1,5 @@
-<h1>Articles</h1>
-<p><%= button_to 'New article', new_article_path, :method => :get %></p>
+<h1>Demonstration Ruby on Rails Application</h1>
+<p><%= button_to 'Add article', new_article_path, :method => :get %></p>
 
 <table>
   <tr>
@@ -22,3 +22,5 @@
 <% if @articles.blank? %>
 <p><em>There are currently no articles.</em></p>
 <% end %>
+
+<p class="app-info">This demonstration is modeled after the official <%= link_to 'Getting Started', 'http://guides.rubyonrails.org/getting_started.html' %> Rails Guide.</p>
