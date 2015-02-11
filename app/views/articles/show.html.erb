@@ -1,11 +1,7 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<h1><%= @article.title %></h1>
 
-<p>
-  <strong>Text:</strong>
+<div class="article">
   <%= @article.text %>
-</p>
+</div>
 
-<p><%= link_to 'Back', articles_path %> | <%= link_to 'Edit', edit_article_path(@article) %></p>
+<p><%= link_to 'Back to Index', root_path %> | <%= link_to 'Edit', edit_article_path(@article) %></p>
