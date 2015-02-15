@@ -29,7 +29,8 @@ button {
 }
 
 #container {
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
   text-align: left;
   margin: 0 auto;
 }
