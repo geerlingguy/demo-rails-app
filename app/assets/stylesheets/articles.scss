@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.add-article {
+  margin-bottom: 3em;
+}
+
+.operations a {
+  padding: .75em 1em .75em 0;
+  margin-right: .5em;
+}
+
 form input,
 form textarea {
   font-size: 1em;

@@ -1,14 +1,16 @@
 <h1 id="page-title">Demonstration Ruby on Rails Application</h1>
-<p><%= button_to 'Add article', new_article_path, :method => :get %></p>
+<div class="add-article"><%= button_to 'Add article', new_article_path, :method => :get %></div>
 
 <div class="article-list">
   <% @articles.each do |article| %>
-    <h2 class="title"><%= article.title %></h2>
-    <div class="text"><%= simple_format(article.text) %></div>
-    <div class="operations">
-      <%= link_to 'View', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
-          method: :delete,
-          data: { confirm: 'Are you sure you want to delete this Article?' } %>
+    <div class="article">
+      <h2 class="title"><%= article.title %></h2>
+      <div class="text"><%= simple_format(article.text) %></div>
+      <div class="operations" style="visibility: hidden;">
+        <%= link_to 'View', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
+            method: :delete,
+            data: { confirm: 'Are you sure you want to delete this Article?' } %>
+      </div>
     </div>
   <% end %>
 </div>
