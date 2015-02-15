@@ -2,11 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery(document).ready ->
-  jQuery('.article').hover (->
-    jQuery(this).find('.operations').css('visibility', 'visible')
+ready = ->
+  $('.article').hover (->
+    $(this).find('.operations').css('visibility', 'visible')
     return
   ), ->
-    jQuery(this).find('.operations').css('visibility', 'hidden')
+    $(this).find('.operations').css('visibility', 'hidden')
     return
   return
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
