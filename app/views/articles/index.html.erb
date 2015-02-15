@@ -4,7 +4,7 @@
 <div class="article-list">
   <% @articles.each do |article| %>
     <h2 class="title"><%= article.title %></h2>
-    <div class="text"><%= article.text %></div>
+    <div class="text"><%= simple_format(article.text) %></div>
     <div class="operations">
       <%= link_to 'View', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
           method: :delete,

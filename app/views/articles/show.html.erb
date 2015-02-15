@@ -1,7 +1,7 @@
 <h1 id="page-title"><%= @article.title %></h1>
 
 <div class="article">
-  <%= @article.text %>
+  <%= simple_format(@article.text) %>
 </div>
 
 <p><%= link_to 'Back to Index', root_path %> | <%= link_to 'Edit', edit_article_path(@article) %></p>
