@@ -12,8 +12,17 @@ before_script:
   - rake db:create
   - rake db:schema:load
 
+  # Write a secrets.yml file.
+  - |
+    cat > config/secrets.yml << EOF
+    ---
+    test:
+      secret_key_base: 365f594b22c0e6673153c0bfb7faa8a887c7b17495277ee7a02d6675bacc4effc8836b45464e7026097c27fb643d5e9f8cdd5c9f53f41cf78c8b8e383c4b3cad
+    EOF
+
 script:
   - curl --fail --head http://localhost:3000/
 
 after_failure:
   - curl http://localhost:3000/
+  - cat config/secrets.yml
