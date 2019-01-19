@@ -3,5 +3,12 @@ language: ruby
 rvm:
   - "2.6"
 
-script:
+env:
+  global:
+    - RAILS_ENV: test
+
+before_script:
   - bin/rails server
+
+script:
+  - curl --head http://localhost:3000/
