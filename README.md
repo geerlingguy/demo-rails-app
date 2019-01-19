@@ -1,5 +1,7 @@
 # Demo Rails App
 
+[![Build Status](https://travis-ci.org/geerlingguy/demo-rails-app.svg?branch=master)](https://travis-ci.org/geerlingguy/demo-rails-app)
+
 This repository contains an extremely simple Ruby on Rails app which follows the official [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html) guide.
 
 The app is meant for demonstration purposes in [Ansible for DevOps](http://ansiblefordevops.com/), a book on [Ansible](http://www.ansible.com/) by [Jeff Geerling](http://jeffgeerling.com/). See, specifically, the [deployments example](https://github.com/geerlingguy/ansible-for-devops/tree/master/deployments) in the official Ansible for DevOps repository.
