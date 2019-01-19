@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rb-readline'
 
-group :development, :test do
+group :development do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
