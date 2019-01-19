@@ -10,6 +10,8 @@ If you'd like to run the example locally, make sure you have Ruby and Rails inst
 
   1. `sudo bundle install`
   2. `bin/rails server`
+  3. `rake db:create`
+  4. `rake db:schema:load`
 
 After WEBrick starts up on port 3000 (it's default), you should be able to browse the rails app in your browser at something like `http://localhost:3000/`.
 

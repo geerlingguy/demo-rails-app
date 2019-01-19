@@ -9,6 +9,8 @@ env:
 
 before_script:
   - bin/rails server -d
+  - rake db:create
+  - rake db:schema:load
 
 script:
   - curl --head http://localhost:3000/
