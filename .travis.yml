@@ -8,7 +8,7 @@ env:
     - RAILS_ENV: test
 
 before_script:
-  - bin/rails server
+  - bin/rails server -d
 
 script:
   - curl --head http://localhost:3000/
