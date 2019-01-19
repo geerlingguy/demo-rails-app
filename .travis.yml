@@ -12,8 +12,9 @@ before_script:
   - rake db:create
   - rake db:schema:load
 
-  # Write a secrets.yml file.
+  # Copy the CI secrets.yml file.
   - cp test/secrets.ci.yml config/secrets.yml
+  - chmod 777 config/secrets.yml
 
 script:
   - curl --fail --head http://localhost:3000/
