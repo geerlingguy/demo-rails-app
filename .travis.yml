@@ -9,8 +9,8 @@ env:
 
 before_script:
   - bin/rails server -d
-  - rake db:create
-  - rake db:schema:load
+  - bundle exec rake db:create
+  - bundle exec rake db:schema:load
 
   # Copy the CI secrets.yml file.
   - cp test/secrets.ci.yml config/secrets.yml
