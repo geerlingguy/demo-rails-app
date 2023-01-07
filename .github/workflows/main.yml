@@ -1,0 +1,32 @@
+name: "Ruby on Rails CI"
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          bundler-cache: true
+      - name: Start the Rails server
+        run: bin/rails server -d
+      - name: Create database
+        run: bundle exec rake db:create
+      - name: Set up database schema
+        run: bundle exec rake db:schema:load
+      - name: Copy the CI secrets.yml file
+        run: |
+          cp test/secrets.ci.yml config/secrets.yml
+          chmod 777 config/secrets.yml
+      - name: Test the homepage
+        run: curl --fail --head http://localhost:3000/
