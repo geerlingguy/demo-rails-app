@@ -1,6 +1,6 @@
 # Demo Rails App
 
-[![Build Status](https://travis-ci.org/geerlingguy/demo-rails-app.svg?branch=master)](https://travis-ci.org/geerlingguy/demo-rails-app)
+[![Build Status](https://github.com/geerlingguy/demo-rails-app/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/geerlingguy/demo-rails-app/actions/workflows/main.yml)
 
 This repository contains an extremely simple Ruby on Rails app which follows the official [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html) guide.
 
