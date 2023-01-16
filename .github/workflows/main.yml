@@ -16,17 +16,11 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'
+          ruby-version: '2.7.6'
           bundler-cache: true
       - name: Start the Rails server
         run: bin/rails server -d
-      - name: Create database
-        run: bundle exec rake db:create
-      - name: Set up database schema
-        run: bundle exec rake db:schema:load
-      - name: Copy the CI secrets.yml file
-        run: |
-          cp test/secrets.ci.yml config/secrets.yml
-          chmod 777 config/secrets.yml
+      - name: Create and migrate database
+        run: bin/rails db:migrate
       - name: Test the homepage
         run: curl --fail --head http://localhost:3000/

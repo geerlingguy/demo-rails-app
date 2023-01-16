@@ -10,30 +10,17 @@ The app is meant for demonstration purposes in [Ansible for DevOps](http://ansib
 
 If you'd like to run the example locally, make sure you have Ruby and Rails installed, then do the following (from within this repository's directory):
 
-  1. `sudo bundle install`
+  1. `bundle install --path vendor/bundle`
   2. `bin/rails server`
-  3. `rake db:create`
-  4. `rake db:schema:load`
+  3. `bin/rails db:migrate`
 
-After WEBrick starts up on port 3000 (it's default), you should be able to browse the rails app in your browser at something like `http://localhost:3000/`.
+After Puma starts up on port 3000 (it's default), you should be able to browse the rails app in your browser at something like `http://localhost:3000/`.
 
-### Generating `secrets.yml`
+### Generating `credentials.yml.enc`
 
-If you get a warning about a secrets.yml file missing, create a secrets.yml file in `config/secrets.yml` with content like the following:
+If you need to store some secret credentials, you can use the command `bin/rails credentials:edit` to generate and edit the `config/credentials.yml.enc` file, together with the corresponding `config/master.key`.
 
-```yaml
----
-development:
-  secret_key_base: SECRET_1_HERE
-
-test:
-  secret_key_base: SECRET_2_HERE
-
-production:
-  secret_key_base: SECRET_3_HERE
-```
-
-To generate secrets for the three environments, run `RAILS_ENV=[environment name here] rake secret`.
+The master key file `config/master.key` must be kept secret!
 
 ## License
 
